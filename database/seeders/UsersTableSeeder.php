@@ -1,4 +1,5 @@
 <?php
+
 namespace Database\Seeders;
 
 use Illuminate\Support\Facades\DB;
@@ -15,7 +16,7 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         DB::table('users')->insert([
-            'name' => 'Admin Admin',
+            'name' => 'Gustavo',
             'email' => 'admin@material.com',
             'email_verified_at' => now(),
             'password' => Hash::make('secret'),
