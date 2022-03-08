@@ -31,7 +31,7 @@
     "trailing-spaces.trimOnSave": true,
     "editor.suggestSelection": "first",
     "editor.tabSize": 2,
-    "diffEditor.ignoreTrimWhitespace": false,
+    "diffEditor.ignoreTrimWhitespace": true,
     "prettier.vueIndentScriptAndStyle": true,
     "javascript.updateImportsOnFileMove.enabled": "always",
     "intelephense.diagnostics.undefinedTypes": false

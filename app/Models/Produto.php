@@ -19,8 +19,8 @@ class Produto extends Model
     ];
 
 
-    public function relCategorias()
+    public function categoria()
     {
-        return $this->hasOne('App\Models\Categoria', 'id', 'category_id');
+        return $this->belongsTo(Categoria::class);
     }
 }

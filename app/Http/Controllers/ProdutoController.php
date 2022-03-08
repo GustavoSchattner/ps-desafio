@@ -19,6 +19,7 @@ class ProdutoController extends Controller
         $this->categorias = $categorias;
     }
 
+
     public function index()
     {
         $produtos = $this->produtos->all();
@@ -89,5 +90,35 @@ class ProdutoController extends Controller
         $produto->delete();
 
         return redirect(route('produto.index'));
+    }
+
+    //Função responsável por mandar dados pra a view produtos
+    public function view(Request $request)
+    {
+        //Pego todos os produtos e retorno eles pra view ordanados alfabeticamente
+        $produtos = Produto::join('categorias', 'categorias.id', '=', 'produtos.categoria_id')
+            ->orderBy('produtos.nome', 'asc');
+
+        //Pego a categoria_id e o nome vindo da request
+        $categoria_id = $request->categoria_id;
+        $nome = $request->nome;
+
+        //Verifico se o categoria_id está presente nas categorias cadastradas
+        if ($categoria_id) {
+            //Caso esteja os produtos serão apenas os que estão nessa categoria
+            $produtos->where('categorias.id', $categoria_id);
+        }
+        //Verifico se nome está entre os nomes de produtos cadastrados
+        if ($nome) {
+            //Se sim, os produtos se tornam apenas os produtos com esse nome. OBS: o %% faz que pegue qualquer produto que possua todos esses caracteres
+            $produtos->where('nome', 'like', "%$request->nome%");
+        }
+
+
+        $produtos = $produtos->get();
+        //Torno as categorias uma lista ordenada alfabeticamente
+        $categorias = Categoria::orderBy('categoria')->get();
+        //retorno pra view
+        return view('produtos', compact('produtos', 'categorias', 'nome', 'categoria_id'));
     }
 }

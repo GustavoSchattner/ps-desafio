@@ -18,6 +18,7 @@
     <!-- CSS Files -->
     {{-- <script src="https://cdn.tailwindcss.com"></script> --}}
     <link href="{{ asset('material') }}/css/material-dashboard.css" rel="stylesheet" />
+
 </head>
 
 <body class="{{ $class ?? '' }}">

@@ -1,0 +1,364 @@
+/*Carregando novas fontes*/
+@import url("https://fonts.googleapis.com/css2?family=Rye&display=swap");
+
+/*RESET*/
+
+Button {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    line-height: normal;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+/* FIM DOS RESETS*/
+/* ESTILIZAÇÃO */
+
+#produtosid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+    grid-gap: 1em;
+}
+
+ul {
+    background-image: url("https://artesanato.culturamix.com/blog/wp-content/gallery/tecnicas-para-envelhecer-papel-6/T%C3%A9cnicas-Para-Envelhecer-Papel-18.jpg");
+    text-align: center;
+}
+
+#nome-produto {
+    text-align: center;
+    text-shadow: 50px;
+    font-weight: bold;
+    font-family: "Rye", cursive;
+}
+
+body {
+    background-image: url("https://ae01.alicdn.com/kf/HTB1mt9EqbSYBuNjSspiq6xNzpXad/Pano-de-fundo-de-madeira-escura-r-stico-pano-de-vinil-de-alta-qualidade-com-impress.jpg");
+    padding: 0;
+    margin: 0;
+}
+
+#imagem-produto {
+    width: 250px;
+    height: 250px;
+}
+
+li {
+    font-family: "Rye", cursive;
+}
+
+#esgotado {
+    color: red;
+    font-weight: bold;
+}
+
+::placeholder {
+    color: #dbb930;
+}
+
+#linha {
+    justify-content: end;
+}
+
+#icone-pesquisar {
+    top: 0px;
+}
+
+#busca {
+    font-size: 17px;
+    border-radius: 50px;
+    background-color: #8a694d;
+    color: black;
+    border: none;
+}
+
+#nomenav {
+    color: #ac9020;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Rye", cursive;
+    font-size: larger;
+    position: relative;
+    padding-top: 6px;
+}
+nav {
+    padding: 10px;
+    background-color: #532d0b;
+}
+
+#logoicon {
+    width: 35px;
+    height: 35px;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #532d0b;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #ac9020;
+    padding: 14px 14px;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #724015;
+    color: #ac9020;
+}
+
+.topnav input[type="text"] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+}
+
+.topnav button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: none;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+.topnav button:hover {
+    background: #724015;
+    border-radius: 50px;
+}
+
+#busca:hover {
+    background: #724015;
+}
+
+.caixafiltro {
+    background-color: #8a694d;
+    color: #e2c243;
+    font-weight: bold;
+    border-radius: 50px;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    padding: 6px;
+    height: 30px;
+    cursor: pointer;
+    margin-top: 6px;
+}
+
+.caixafiltro select {
+    background: transparent; /* importante para exibir o novo ícone */
+    width: 268px;
+    padding: 5px;
+    font-size: 16px;
+    line-height: 1;
+    border: 0;
+    border-radius: 0;
+    height: 34px;
+    -webkit-appearance: none;
+}
+.caixafiltro:hover {
+    background-color: #724015;
+    color: #ac9020;
+}
+
+.formulario {
+    width: 905px;
+}
+/* Medias para deixar responsivo*/
+
+.botao {
+    color: #e2c243;
+}
+
+.rodape {
+    display: flex;
+    flex-direction: row;
+    background-color: #532d0b;
+    color: #e2c243;
+}
+
+.iconesredes {
+    padding: 15px;
+}
+
+.textofooter {
+    padding: 15px;
+    width: 85%;
+}
+
+.textofooter i {
+    font-size: 12px;
+}
+main {
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+@media screen and (max-width: 380px) {
+    .topnav {
+        float: none;
+    }
+    .topnav a,
+    .topnav input[type="text"],
+    .topnav {
+        float: none;
+        display: block;
+        text-align: left;
+        width: 80%;
+        margin: 0;
+    }
+    .topnav input[type="text"] {
+        border: 1px solid #724015;
+    }
+    .formulario {
+        width: 100px;
+    }
+    #busca {
+        font-size: 12px;
+        width: 20%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .topnav {
+        float: none;
+    }
+    .topnav a,
+    .topnav input[type="text"],
+    .topnav {
+        float: none;
+        display: block;
+        text-align: left;
+        width: 80%;
+        margin: 0;
+        padding: 10px;
+    }
+    .topnav input[type="text"] {
+        border: 1px solid #724015;
+    }
+    .formulario {
+        width: 650px;
+    }
+    #busca {
+        font-size: 12px;
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .topnav {
+        float: none;
+    }
+    .topnav a,
+    .topnav input[type="text"],
+    .topnav {
+        float: none;
+        display: block;
+        text-align: left;
+        width: 80%;
+        margin: 0;
+        padding: 10px;
+    }
+    .topnav input[type="text"] {
+        border: 1px solid #724015;
+    }
+    .formulario {
+        width: 650px;
+    }
+    #busca {
+        font-size: 12px;
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 824px) {
+    .formulario {
+        width: 700px;
+    }
+    .topnav a {
+        font-size: 15px;
+    }
+    #busca {
+        font-size: 12px;
+    }
+    .caixafiltro {
+        font-size: 12px;
+    }
+    .botao {
+        position: relative;
+        left: -8%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .formulario {
+        width: 900px;
+    }
+    #busca {
+        font-size: 12px;
+    }
+    .caixafiltro {
+        font-size: 12px;
+    }
+    .botao {
+        position: relative;
+        left: -10%;
+    }
+    .formulario {
+        width: 650px;
+    }
+    #busca {
+        font-size: 12px;
+        width: 20%;
+    }
+}

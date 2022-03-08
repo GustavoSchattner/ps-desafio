@@ -28,6 +28,9 @@ Route::middleware('locale')->group(function () {
         return redirect()->route('dashboard');
     });
 
+    //Rota para a view Produtos
+    Route::get('produtos', [ProdutoController::class, 'view'])->name('produtos');
+
     Auth::routes();
 
     Route::middleware('auth')->group(function () {

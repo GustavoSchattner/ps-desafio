@@ -15,6 +15,6 @@ class Categoria extends Model
 
     public function relProdutos()
     {
-        return $this->hasMany('App\Models\Produto', 'category_id');
+        return $this->hasMany('App\Models\Produto', 'categoria_id');
     }
 }
